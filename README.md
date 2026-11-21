@@ -1,36 +1,30 @@
-
 # Tugas Praktikum 2
 
 ## Implementasi Tampilan Web Interaktif Menggunakan Komponen WebView pada Arsitektur Baru (Fabric) React Native
 
 ### Tujuan
-Membuat aplikasi React Native yang menggunakan komponen WebView dengan mengaktifkan New Architecture (Fabric).
+Membuat aplikasi React Native yang menggunakan komponen WebView dengan mengaktifkan New Architecture (Fabric) serta mendukung interaksi dua arah antara React Native dan konten web.
 
 ### Teknologi
 - React Native
 - JavaScript
-- React Native WebView
+- React Native WebView (`react-native-webview`)
 - Android Studio
 - Visual Studio Code
 
 ### Fitur
-1. Menampilkan header Portal Kampus.
-2. Menampilkan halaman website menggunakan WebView.
-3. Mengaktifkan JavaScript.
-4. Menggunakan New Architecture (Fabric).
+- Menampilkan halaman web interaktif dengan counter dan tombol aksi.
+- Mengirim pesan dari React Native ke halaman web menggunakan `injectJavaScript`.
+- Menerima data/event dari halaman web ke React Native menggunakan `window.ReactNativeWebView.postMessage` dan `onMessage`.
+- Indikator loading saat halaman web dimuat.
 
-### Konfigurasi Fabric
-File android/gradle.properties:
-
-    newArchEnabled=true
-
-### Instalasi WebView
-
-    npm install react-native-webview
-
-### Menjalankan Aplikasi
-
-    npx react-native run-android
-
-### Kesimpulan
-Aplikasi ini dibuat untuk mengimplementasikan komponen WebView pada React Native dengan dukungan arsitektur baru Fabric.
+### Cara Menjalankan
+1. Install dependensi:
+   ```bash
+   npm install
+   ```
+2. Pastikan `newArchEnabled=true` pada `android/gradle.properties`.
+3. Jalankan aplikasi:
+   ```bash
+   npx react-native run-android
+   ```
